@@ -1,6 +1,5 @@
 import Image from "next/image"
 import style from './Card.module.css'
-import img from '../../image/2.jpg'
 
 
 export default function Card ({location, rating, title, desc}){
