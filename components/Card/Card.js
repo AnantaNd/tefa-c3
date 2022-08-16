@@ -3,7 +3,7 @@ import style from './Card.module.css'
 import img from '../../image/2.jpg'
 
 
-export default function Card ({location}){
+export default function Card ({location, rating, title, desc}){
   return (
     <>
       <div className={style.card}>
@@ -12,11 +12,9 @@ export default function Card ({location}){
           <div className={style.img_card}></div>
         </div>
         <div className={style.content}>
-          <p className={style.rating}>rating: 4.5</p>
-          <h1 className={style.title}>Title</h1>
-          <p className={style.description}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-            </p>
+          <p className={style.rating}>rating : {rating}</p>
+          <h1 className={style.title}>{title}</h1>
+          <p className={style.description}>{desc}</p>
         </div>
       </div>
     </>
