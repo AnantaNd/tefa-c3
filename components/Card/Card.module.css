@@ -3,11 +3,9 @@
 
 .card{
   max-width: 300px;
-  margin: 6px;
-  padding: 8px;
+  padding: 5px;
   text-align: center;
-  box-shadow: 0 3px 3px 0 #185494;
-  border: 1.8px solid #185494;
+  /* border: 1.8px solid #185494; */
   border-radius: 8px;
   z-index: -1;
 }
@@ -24,13 +22,14 @@
   font-weight: 600;
 }
 .title{
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: 1.8px;
   font-family: 'Josefin Sans';
 }
 .location{
   padding: 3px;
   width: 100px;
+  height: 30px;
   letter-spacing: 2px;
   height: 30px;
   font-size: 16px;
@@ -41,7 +40,7 @@
   float: left;
   background-color: #EE1D23;
   color: #fff;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Share Tech Mono';
 }
 .img_card{
   background-image: url("../../image/2.jpg");
@@ -54,7 +53,15 @@
   border-radius: 10px;
   z-index: -1;
 }
+.description{
+  font-size: 16px;
+  text-transform: capitalize;
+  
+ 
+}
 .card:hover{
   transform: scale(1.05);
   transition-delay: 5ms;
+  box-shadow: 0 3px 3px 0 #185494;
+  cursor: pointer;
 }

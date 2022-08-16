@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 .container{
   padding: 0;
@@ -32,11 +31,11 @@
 .logo{
   letter-spacing: 2px;
   float: left;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   padding: 14px 16px;
   color: #FAAF18;
-  font-family: 'Satisfy';
+  font-family: 'Kaushan Script';
   text-transform: capitalize;
 }
 .wrap_img{

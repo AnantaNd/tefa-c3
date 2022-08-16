@@ -6,16 +6,10 @@ export default function Header (){
     <div className={style.container}>
       <header>
         <ul className={style.menu}>
-          <li className={style.menuItem}>
-            <Link href="#about">About</Link>
-          </li>
-          <li className={style.menuItem}>
-            <Link href="#Favorite">Favorite</Link>
-          </li>
-          <li className={style.menuItem}>
-            <Link className="" href="#home">Home</Link>
-          </li>
           <li className={style.logo}><a href="#/">Hunger App</a></li>
+          <li className={style.menuItem}><Link href="#about">About</Link></li>
+          <li className={style.menuItem}><Link href="#Favorite">Favorite</Link></li>
+          <li className={style.menuItem}><Link className="" href="#home">Home</Link></li>
         </ul>
       </header>
     </div>
