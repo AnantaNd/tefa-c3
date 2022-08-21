@@ -1,7 +1,13 @@
 import style from '../styles/Header.module.css'
 import Link from 'next/link'
+import { useState } from 'react'
+import {FaBars} from 'react-icons/fa'
 
 export default function Header (){
+  const [isOpen, setIsOpen] = useState(false)
+  const navOpen = () => setIsOpen(!setIsOpen)
+
+
   return (
     <div className={style.container}>
       <nav>

@@ -9,7 +9,6 @@ export default function Home() {
         <Link href="#menu">
           <p className="label-section">Explore Restaurant</p>
         </Link>
-
         <div className="container_card">
           <div className="row">
             <div className="col">
