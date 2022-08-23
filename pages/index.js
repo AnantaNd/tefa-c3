@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import Card from '../components/Card'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <main className="container">
       <Layout>
@@ -11,49 +11,18 @@ export default function Home() {
         </Link>
         <div className="container_card">
           <div className="row">
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
+            {data.map((restaurant)=>
+              <div className="col" key={restaurant.id}>
+                <Card
+                  image={restaurant.image}
+                  location={restaurant.location}
+                  title={restaurant.title}
+                  rating={restaurant.rating}
+                  desc={restaurant.description}
+                />
               </div>
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
-              </div>
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
-              </div>
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
-              </div>
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
-              </div>
-            <div className="col">
-              <Card 
-                location={'Bandung'}
-                title={'title'}
-                rating={'4.5'}
-                desc={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'}/>
-              </div>
-            </div>
+            )}
+          </div>
         </div>
         <Link href="#description">
           <p className="label-section">back to top</p>
@@ -61,4 +30,11 @@ export default function Home() {
       </Layout>
     </main>
   )
+}
+
+export async function getServerSideProps(){
+  const res = await fetch('http://localhost:3000/api/restaurant')
+  const data = await res.json()
+
+  return{props: {data}}
 }

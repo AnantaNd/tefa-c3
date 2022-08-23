@@ -1,13 +1,13 @@
 import style from '../styles/Card.module.css'
 
 
-export default function Card ({location, rating, title, desc}){
+export default function Card ({location, rating, title, desc, image}){
   return (
     <>
       <div className={style.card}>
         <div className={style.wrap_img}>
           <p className={style.location}>{location}</p>
-          <div className={style.img_card}></div>
+          <img className={style.img_card} src={image} alt={title} />
         </div>
         <div className={style.content}>
           <p className={style.rating}>rating : {rating}</p>

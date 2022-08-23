@@ -6,6 +6,7 @@
   padding: 5px;
   text-align: center;
   border-radius: 8px;
+  border: 1px solid #A9C7C5;
   box-shadow: 0 3px 3px 0 #A9C7C5;
   z-index: -1;
 }
@@ -27,29 +28,32 @@
   font-family: 'fantasy';
   text-transform: capitalize;
 }
-.location{
-  padding: 3px;
+.wrap_location{
   width: 100px;
   height: 30px;
+  background-color: #fa573a;
+  border-radius: 4px;
+  z-index: 1;
+}
+.location{
+  padding: 3px;
   letter-spacing: 2px;
-  height: 30px;
+  font-family: 'Share Tech Mono';
+  font-weight: 600;
   font-size: 16px;
   text-align: center;
+  align-items: center;
   text-transform: capitalize;
-  font-weight: 600;
-  border-radius: 0 4px 4px 0;
-  float: left;
-  background-color: #fa573a;
   color: #fff;
-  font-family: 'Share Tech Mono';
+  
 }
 .img_card{
-  background-image: url("https://ik.imagekit.io/l47yqgkjf/4_ea0LoGarw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661050624413");
   width: 100%;
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
   position: relative;
   border-radius: 10px;
   z-index: -1;

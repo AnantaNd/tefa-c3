@@ -39,7 +39,12 @@ a {
   text-decoration: underline;
   color: #EE1D23;
 }
-
+@media screen and (max-width: 768px){
+  .label-section{
+    font-size: 24px;
+  }
+}
+  
 .row{
   margin: 5rem;
   box-sizing: border-box;
