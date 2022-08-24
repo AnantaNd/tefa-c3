@@ -20,7 +20,7 @@ export default function handler(req, res){
     case 'PUT':
       if(results.length > 0){
         res.status(200).json({
-          id: results+1,
+          id: results.id,
           title,
           rating,
           location,
