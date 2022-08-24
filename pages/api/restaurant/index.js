@@ -11,14 +11,15 @@ export default function handler(req, res){
       break;
     // create new restaurant
     case 'POST':
-      res.status(200).json({
+      restaurant.push({
         id: restaurant.length+1,
-        title,
-        rating,
-        location,
-        description,
-        image,
-      });
+        title: title,
+        rating: rating,
+        location: location,
+        description: description,
+        image: image
+      })
+      res.status(200).json({restaurant});
       break;
     default:
       res.setHeader('allow', ['GET', 'POST']);

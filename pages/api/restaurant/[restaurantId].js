@@ -20,12 +20,12 @@ export default function handler(req, res){
     case 'PUT':
       if(results.length > 0){
         res.status(200).json({
-          id: results.id,
+          id: results+1,
           title,
           rating,
           location,
           description,
-          image,
+          image
         })
       }else{
         res.status(404).json(
