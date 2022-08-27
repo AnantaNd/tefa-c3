@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
 .navbar {
   height: 80px;
   width: 100%;
@@ -41,7 +39,6 @@
   font-size: 25px;
   font-weight: bold;
   color: #fa573a;
-  font-family: 'Kaushan Script';
   text-transform: capitalize;
 }
 
