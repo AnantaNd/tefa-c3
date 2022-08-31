@@ -1,7 +1,7 @@
-import style from '../styles/Header.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
-import {FaBars} from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
+import style from '../styles/Header.module.css'
 
 export default function Header (){
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +17,7 @@ export default function Header (){
         <li className={style.item}><Link href="#about">About</Link></li>
       </ul>
       <div className={style.burger} onClick={navOpen}>
-        <FaBars/>
+        {!isOpen? <FaBars/>:<FaTimes/>}
       </div>
     </nav>
   )
