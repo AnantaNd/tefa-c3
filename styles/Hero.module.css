@@ -12,7 +12,8 @@
 .hero_description{ 
   text-align: justify;
   margin: 0 auto;
-  
+  font-size: 20px;
+  color: #fff; 
 }
 .hero_title{
   font-size: 50px;
@@ -20,10 +21,7 @@
   letter-spacing: 2px;
   text-align: start;
   color: #fa573a;
-}
-.hero_description{
-  font-size: 24px;
-  color: #fff;
+  font-family: cursive;
 }
 @media screen and (max-width: 768px) {
   .hero_description{

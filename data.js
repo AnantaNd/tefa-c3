@@ -22,6 +22,30 @@ export const restaurant = [
     location: "Malang",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image:'https://ik.imagekit.io/l47yqgkjf/6_vTISTpmrp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661223965452'
-  }
-
+  },
+  {
+    id: 4,
+    title: "Java Coffee",
+    rating: '3.5',
+    location: "Solo",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    image:'https://ik.imagekit.io/l47yqgkjf/6_vTISTpmrp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661223965452'
+  },
+  {
+    id: 5,
+    title: "Java Coffee",
+    rating: '3.5',
+    location: "Bali",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    image:'https://ik.imagekit.io/l47yqgkjf/6_vTISTpmrp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661223965452'
+  },
+  {
+    id: 6,
+    title: "Saigon Resto",
+    rating: '3.5',
+    location: "Bali",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    image:'https://ik.imagekit.io/l47yqgkjf/3_GoOpl6YFP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660621619556'
+  },
+  
 ]

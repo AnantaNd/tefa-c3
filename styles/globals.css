@@ -46,7 +46,7 @@ a {
 }
   
 .row{
-  margin: 5rem;
+  margin: 4rem 5rem;
   box-sizing: border-box;
   display: flex;
   align-items: center;

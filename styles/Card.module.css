@@ -34,7 +34,7 @@
   font-size: 16px;
   text-align: center;
   text-transform: capitalize;
-  background-color: #fa573a;
+  background-color: #053852;
   color: #fff;
 }
 .img_card{
@@ -53,7 +53,7 @@
 }
 .card:hover{
   transform: scale(1.05);
-  transition-delay: 5ms;
+  transition-delay: 8ms;
   cursor: pointer;
 }
 @media screen and (max-width: 768px){
