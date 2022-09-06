@@ -54,13 +54,15 @@
   position: absolute;
   right: 30px;
   align-items: center;
-  top: 7px;
-  font-size: 23px;
+  top: 1px;
+  font-size: 25px;
+  padding: 10px 10px 5px;
+  border: 1px solid #053852;
+  border-radius: 5px;
 }
 .burger:active{
-  transform: rotateY(60deg);
-  transition: 5ms;
   color: #EE1D23;
+  border-color: #EE1D23;
 }
 @media screen and (max-width: 768px) {
   .navbar {
