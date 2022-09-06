@@ -14,7 +14,7 @@
 }
 .rating{
   color: #fa573a;
-  font-size: 14px;
+  font-size: 16px;
   text-align: start;
   font-weight: 600;
 }
@@ -60,5 +60,11 @@
   .card{
     margin: 0 auto;
     max-width: 350px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .description{
+    font-size: 14px;
   }
 }

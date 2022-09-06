@@ -5,12 +5,12 @@ import Layout from '../components/Layout'
 
 export default function Home() {
 
-  const [restaurant, setRestaurant] = useState([])
+  const [data, setData] = useState([])
 
   useEffect(() =>{
-    fetch('api/restaurant')
+    fetch('http://localhost:3000/api/restaurant')
       .then((res) => res.json())
-      .then((data) => setRestaurant(data))
+      .then((loadData) => setData(loadData))
   },[])
 
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         </Link>
         <div className="container_card">
           <div className="row">
-            {restaurant.map((restaurants)=>
+            {data.map((restaurants)=>
               <div className="col" key={restaurants.id}>
                 <Card
                   image={restaurants.image}
@@ -42,15 +42,6 @@ export default function Home() {
   )
 }
 
-// export async function getServerSideProps(){
-//   try{
-//     const res = await fetch('http://localhost:3000/api/restaurant')
-//     const data = await res.json()
-//     return ({props: {data}});
-//   }catch(e){
-//     console.error(e)
-//   }
-// }
 
 // promise
 // function cobaPromise(){
