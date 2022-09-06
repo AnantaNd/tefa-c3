@@ -1,4 +1,4 @@
-import {restaurant} from '../../../data.js'
+import { restaurant } from '../../../data.js';
 
 export default function handler(req, res){
   const httpMethod = req.method;

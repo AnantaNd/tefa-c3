@@ -1,8 +1,18 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
 
-export default function Home({data}) {
+export default function Home() {
+
+  const [restaurant, setRestaurant] = useState([])
+
+  useEffect(() =>{
+    fetch('api/restaurant')
+      .then((res) => res.json())
+      .then((data) => setRestaurant(data))
+  },[])
+
   return (
     <main className="container">
       <Layout>
@@ -11,14 +21,14 @@ export default function Home({data}) {
         </Link>
         <div className="container_card">
           <div className="row">
-            {data.map((restaurant)=>
-              <div className="col" key={restaurant.id}>
+            {restaurant.map((restaurants)=>
+              <div className="col" key={restaurants.id}>
                 <Card
-                  image={restaurant.image}
-                  location={restaurant.location}
-                  title={restaurant.title}
-                  rating={restaurant.rating}
-                  desc={restaurant.description}
+                  image={restaurants.image}
+                  location={restaurants.location}
+                  title={restaurants.title}
+                  rating={restaurants.rating}
+                  desc={restaurants.description}
                 />
               </div>
             )}
@@ -32,9 +42,66 @@ export default function Home({data}) {
   )
 }
 
-export async function getServerSideProps(){
-  const res = await fetch('http://localhost:3000/api/restaurant')
-  const data = await res.json()
+// export async function getServerSideProps(){
+//   try{
+//     const res = await fetch('http://localhost:3000/api/restaurant')
+//     const data = await res.json()
+//     return ({props: {data}});
+//   }catch(e){
+//     console.error(e)
+//   }
+// }
 
-  return{props: {data}}
-}
+// promise
+// function cobaPromise(){
+//   return new Promise((resolve, reject) => {
+//     const waktu = 5000
+//     if(waktu < 5000){
+//       setTimeout(()=>{
+//         resolve("selesai");
+//       }, waktu);
+//     }else{
+//       reject("lama")
+//     }
+//   })
+// }
+// const coba = cobaPromise()
+// coba
+//   .then(() =>console.log(coba))
+//   .catch(()=>console.log(coba))
+
+//  async await
+// async function cobaAsync(){
+//   try{
+//     const coba = await cobaPromise()
+//     console.log(coba)
+//   }catch(e){
+//     console.error(e)
+//   }
+// }
+// cobaAsync()
+
+// tugas kelas
+// function loadJson(url) {
+//   return fetch(url)
+//     .then(response => {
+//       if (response.status == 200) {
+//         return response.json();
+//       } else {
+//         throw new Error(response.status);
+//       }
+//     });
+// }
+
+// loadJson('no-such-user.json')
+//   .catch(alert);
+
+// async function loadJson(url){
+//   try{
+//     const res = await fetch(url)
+//     const data = await res.json()
+//     return data;
+//   }catch(e){
+//     console.error(e)
+//   }
+// }
