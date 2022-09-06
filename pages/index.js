@@ -8,7 +8,7 @@ export default function Home() {
   const [data, setData] = useState([])
 
   useEffect(() =>{
-    fetch('http://localhost:3000/api/restaurant')
+    fetch('/api/restaurant')
       .then((res) => res.json())
       .then((loadData) => setData(loadData))
   },[])
