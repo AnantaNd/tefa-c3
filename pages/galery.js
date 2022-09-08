@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
+import style from "../styles/Galery.module.css";
 
 
 export default function Galery(){
@@ -37,12 +38,15 @@ export default function Galery(){
   },[])
 
   return(
-    <main className="container">
+    <main className={style.container}>
       <Layout>
-        <div className="container-card">
-          <div className="row">
+        <div className={style.container_header}>
+          <h1 className={style.header}>Galery</h1>
+        </div>
+        <div className={style.container_card}>
+          <div className={style.row}>
             {dataAsync.map((restaurant)=>
-              <div className="col" key={restaurant.id}>
+              <div className={style.col} key={restaurant.id}>
                 <Card
                     image={restaurant.image}
                     location={restaurant.location}

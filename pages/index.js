@@ -43,25 +43,27 @@ export default function Home() {
       <Layout>
         <section id='description'>
           <Hero />
+          <Link href="#menu">
+            <p className="label-section">Explore Restaurant</p>
+          </Link>
         </section>
-        <Link href="#menu">
-          <p className="label-section">Explore Restaurant</p>
-        </Link>
-        <div className="container_card">
-          <div className="row">
-            {dataPromise.map((restaurants)=>
-              <div className="col" key={restaurants.id}>
-                <Card
-                  image={restaurants.image}
-                  location={restaurants.location}
-                  title={restaurants.title}
-                  rating={restaurants.rating}
-                  desc={restaurants.description}
-                />
-              </div>
-            )}
+        <section id='menu'>
+          <div className="container_card">
+            <div className="row">
+              {dataPromise.map((restaurants)=>
+                <div className="col" key={restaurants.id}>
+                  <Card
+                    image={restaurants.image}
+                    location={restaurants.location}
+                    title={restaurants.title}
+                    rating={restaurants.rating}
+                    desc={restaurants.description}
+                  />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </section>
         <Link href="#description">
           <p className="label-section">back to top</p>
         </Link>

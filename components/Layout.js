@@ -6,9 +6,7 @@ export default function Layout({children}) {
   return (
     <div className={style.layout}>
       <Navbar />
-      <section id='menu'>
         {children}
-      </section>
       <Footer/>
     </div>
   );
