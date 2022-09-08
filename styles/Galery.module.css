@@ -10,7 +10,7 @@
   align-items: center;
 }
 .row{
-  margin: 4rem 3rem;
+  margin: 0 3rem 4rem 3rem;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -25,11 +25,14 @@
   flex-grow: 2;
 }
 .container_header{
-  margin-top: 6.5rem;
+  padding: 2rem 3rem;
 }
 .header{
   text-align: center;
   font-family: 'fantasy';
-  margin: 10px auto;
+  margin: 50px auto;
+  letter-spacing: 2px;
+  font-size: 50px;
+  color: #fa573a;
   
 }
