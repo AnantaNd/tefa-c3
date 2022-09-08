@@ -1,27 +1,55 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
+import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 
 export default function Home() {
 
-  const [data, setData] = useState([])
+  const [dataAsync, setDataAsync] = useState([])
+  const [dataPromise, setdataPromise] = useState([])
+  
+  // async wait fecthApi
+  async function fecthApiAsync(){
+    try{
+      const res = await fetch('./api/restaurant');
+      const data = await res.json();
+      console.log(data);
+      setDataAsync(data);
+    }catch(e){
+      console.error(e);
+    }
+  }
+
+  // promise fecthApi
+  const fecthApiPromise =()=> {
+    const response = fetch('./api/restaurant');
+    response
+      .then(res => res.json())
+      .then(data => { 
+        setdataPromise(data) 
+        console.log(data) 
+      })
+      .catch(e => { console.error(e)} );
+  }
 
   useEffect(() =>{
-    fetch('/api/restaurant')
-      .then((res) => res.json())
-      .then((loadData) => setData(loadData))
+    // fecthApiAsync();
+    fecthApiPromise();
   },[])
 
   return (
     <main className="container">
       <Layout>
+        <section id='description'>
+          <Hero />
+        </section>
         <Link href="#menu">
           <p className="label-section">Explore Restaurant</p>
         </Link>
         <div className="container_card">
           <div className="row">
-            {data.map((restaurants)=>
+            {dataPromise.map((restaurants)=>
               <div className="col" key={restaurants.id}>
                 <Card
                   image={restaurants.image}

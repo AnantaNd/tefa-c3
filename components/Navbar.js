@@ -14,7 +14,7 @@ export default function Navbar (){
       <ul className={!isOpen ? style.menu : style.menures}>
         <li className={style.item}><Link href="/">Home</Link></li>
         <li className={style.item}><Link href="#Favorite">Favorite</Link></li>
-        <li className={style.item}><Link href="#">Galery</Link></li>
+        <li className={style.item}><Link href="/galery">Galery</Link></li>
       </ul>
       <div className={style.burger} onClick={navOpen}>
         {!isOpen? <FaBars/>:<FaTimes/>}
