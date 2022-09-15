@@ -23,7 +23,7 @@ export default function Favorite({data}){
               <Card
                 image={menu.imgMenu}
                 title={menu.nameMenu}
-                rating={`Price : Rp.${menu.price}`}
+                label={`Price : Rp.${menu.price}`}
                 location={menu.idMenu}
               />  
             </div>
