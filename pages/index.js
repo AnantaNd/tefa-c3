@@ -55,7 +55,7 @@ export default function Home() {
                   <div className="col" key={restaurants.id}>
                     <Card
                       image={restaurants.image}
-                      tagging={restaurants.location}
+                      location={restaurants.location}
                       title={restaurants.title}
                       label={`Rating: ${restaurants.rating}`}
                       desc={restaurants.description}
