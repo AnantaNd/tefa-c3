@@ -7,7 +7,7 @@ import style from "../styles/Galery.module.css";
 export default function Galery(){
 
   const [dataAsync, setDataAsync] = useState([])
-  const [dataPromise, setdataPromise] = useState([])
+  // const [dataPromise, setdataPromise] = useState([])
   
   // async wait fecthApi
   async function fecthApiAsync(){
@@ -22,16 +22,16 @@ export default function Galery(){
   }
 
   // promise fecthApi
-  const fecthApiPromise =()=> {
-    const response = fetch('./api/restaurant');
-    response
-      .then(res => res.json())
-      .then(data => { 
-        setdataPromise(data) 
-        console.log(data) 
-      })
-      .catch(e => { console.error(e)} );
-  }
+  // const fecthApiPromise =()=> {
+  //   const response = fetch('./api/restaurant');
+  //   response
+  //     .then(res => res.json())
+  //     .then(data => { 
+  //       setdataPromise(data) 
+  //       console.log(data) 
+  //     })
+  //     .catch(e => { console.error(e)} );
+  // }
 
   useEffect(()=>{
     fecthApiAsync();

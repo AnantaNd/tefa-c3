@@ -5,16 +5,26 @@ import style from '../styles/Navbar.module.css'
 
 export default function Navbar (){
   const [isOpen, setIsOpen] = useState(false)
-  const navOpen = () => setIsOpen(!isOpen)
+  const navOpen = () => {setIsOpen(!isOpen), console.log('click')}
+
+  const navItem = [
+    {name : 'home', link: '/'},
+    {name : 'favorite', link: '/favorite'},
+    // {name : 'galery', link: '/galery'},
+    {name : 'about us', link: '/about'},
+  ]
 
 
   return (
     <nav className={style.navbar}>
       <div className={style.logo}>Hunger<span> App</span></div>
       <ul className={!isOpen ? style.menu : style.menures}>
-        <li className={style.item}><Link href="/">Home</Link></li>
-        <li className={style.item}><Link href="#Favorite">Favorite</Link></li>
-        <li className={style.item}><Link href="/galery">Galery</Link></li>
+        {navItem.map((navItem, i)=>
+          <li key={i} className={style.item}>
+            <Link 
+              href={navItem.link}>{navItem.name}</Link>
+          </li>
+        )}
       </ul>
       <div className={style.burger} onClick={navOpen}>
         {!isOpen? <FaBars/>:<FaTimes/>}

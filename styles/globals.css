@@ -68,3 +68,13 @@ a {
     background-color: #fff
   }
 }
+
+
+/* favorite */
+.hero_container{
+  margin: 2rem auto;
+}
+.hero_title{
+  text-align: center;
+  text-transform: capitalize;
+}

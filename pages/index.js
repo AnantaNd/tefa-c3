@@ -6,20 +6,20 @@ import Layout from '../components/Layout'
 
 export default function Home() {
 
-  const [dataAsync, setDataAsync] = useState([])
+  // const [dataAsync, setDataAsync] = useState([])
   const [dataPromise, setdataPromise] = useState([])
   
   // async wait fecthApi
-  async function fecthApiAsync(){
-    try{
-      const res = await fetch('./api/restaurant');
-      const data = await res.json();
-      console.log(data);
-      setDataAsync(data);
-    }catch(e){
-      console.error(e);
-    }
-  }
+  // async function fecthApiAsync(){
+  //   try{
+  //     const res = await fetch('./api/restaurant');
+  //     const data = await res.json();
+  //     console.log(data);
+  //     setDataAsync(data);
+  //   }catch(e){
+  //     console.error(e);
+  //   }
+  // }
 
   // promise fecthApi
   const fecthApiPromise =()=> {
@@ -51,15 +51,17 @@ export default function Home() {
           <div className="container_card">
             <div className="row">
               {dataPromise.map((restaurants)=>
-                <div className="col" key={restaurants.id}>
-                  <Card
-                    image={restaurants.image}
-                    location={restaurants.location}
-                    title={restaurants.title}
-                    rating={restaurants.rating}
-                    desc={restaurants.description}
-                  />
-                </div>
+                <Link href={`/favorite/${restaurants.id}`}>
+                  <div className="col" key={restaurants.id}>
+                    <Card
+                      image={restaurants.image}
+                      location={restaurants.location}
+                      title={restaurants.title}
+                      rating={`Rating: ${restaurants.rating}`}
+                      desc={restaurants.description}
+                    />
+                  </div>
+                </Link>
               )}
             </div>
           </div>
@@ -71,58 +73,16 @@ export default function Home() {
     </main>
   )
 }
-
-
-// promise
-// function cobaPromise(){
-//   return new Promise((resolve, reject) => {
-//     const waktu = 5000
-//     if(waktu < 5000){
-//       setTimeout(()=>{
-//         resolve("selesai");
-//       }, waktu);
-//     }else{
-//       reject("lama")
-//     }
-//   })
-// }
-// const coba = cobaPromise()
-// coba
-//   .then(() =>console.log(coba))
-//   .catch(()=>console.log(coba))
-
-//  async await
-// async function cobaAsync(){
-//   try{
-//     const coba = await cobaPromise()
-//     console.log(coba)
-//   }catch(e){
-//     console.error(e)
-//   }
-// }
-// cobaAsync()
-
-// tugas kelas
-// function loadJson(url) {
-//   return fetch(url)
-//     .then(response => {
-//       if (response.status == 200) {
-//         return response.json();
-//       } else {
-//         throw new Error(response.status);
-//       }
-//     });
-// }
-
-// loadJson('no-such-user.json')
-//   .catch(alert);
-
-// async function loadJson(url){
-//   try{
-//     const res = await fetch(url)
-//     const data = await res.json()
-//     return data;
-//   }catch(e){
-//     console.error(e)
+// export async function getServerSideProps() {
+//   const res = await fetch('http://localhost:3000/api/restaurant');
+//   const data = await res.json();
+//   try {
+//     return {
+//       props: {
+//         data,
+//       },
+//     };
+//   } catch (err) {
+//     console.error(err);
 //   }
 // }
