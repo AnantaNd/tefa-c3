@@ -17,7 +17,9 @@ export default function Navbar (){
 
   return (
     <nav className={style.navbar}>
-      <div className={style.logo}>Hunger<span> App</span></div>
+      <Link href='/'>
+        <div className={style.logo}>Hunger<span> App</span></div>
+      </Link>
       <ul className={!isOpen ? style.menu : style.menures}>
         {navItem.map((navItem, i)=>
           <li key={i} className={style.item}>

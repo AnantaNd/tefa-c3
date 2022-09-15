@@ -1,6 +1,6 @@
 .container{
   width: 80%;
-  height: 200px;
+  height: 350px;
   margin: 3rem auto;
   border-radius: 10px;
   box-shadow: -1px 15px 21px -3px rgba(0,0,0,0.36);
@@ -11,7 +11,7 @@
   text-align: justify;
   font-size: 18px;
   font-weight: 500;
-  padding: 1rem;
+  padding: 2rem;
 }
 .title{
   text-align: center;

@@ -17,7 +17,7 @@ export default function Favorite({data}){
                     image={rest.image}
                     location={rest.location}
                     title={rest.title}
-                    rating={rest.rating}
+                    rating={`rating ${rest.rating}`}
                   />
               </div>
             </Link>

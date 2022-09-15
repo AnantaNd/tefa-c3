@@ -1,31 +1,31 @@
 import { useState } from "react";
 import Card from "../../../components/Card";
 import Navbar from "../../../components/Navbar";
-
+import style from "../../../styles/Favorite.module.css";
 export default function Favorite({data}){
   
-  const [isData, setIsData] = useState(data)
+  const [isData, setIsData] = useState(data);
+
   
-  console.log(isData);
+  // console.log(isData);
 
   return (
     <>
-      <Navbar />
-      <div className="hero_container">
-        {/* <img src={isData.image} /> */}
-        <h1 className="hero_title">{isData.title}</h1>
+      <Navbar/>
+      <div className={style.container}>
+        <h1 className={style.title}>{isData.title}</h1>
       </div>
-      <div className='container_card'>
-        <div className="row">
+      <div className={style.container_card}>
+        <h2 className={style.me}>menu</h2>
+        <div className={style.row}>
           {isData?.menu?.map((menu, idx)=>(
-            <div key={idx} className="col">
+            <div key={idx} className={style.col}>
               <Card
                 image={menu.imgMenu}
                 title={menu.nameMenu}
-                rating={`Price Rp: ${menu.price}`}
+                rating={`Price : Rp.${menu.price}`}
                 location={menu.idMenu}
-              />
-              
+              />  
             </div>
           ))}
         </div>

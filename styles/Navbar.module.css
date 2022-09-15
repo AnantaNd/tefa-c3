@@ -43,6 +43,7 @@
   text-transform: capitalize;
   font-family: 'Dr Sugiyama';
   margin: 10px 20px;
+  cursor: pointer;
 }
 .logo span{
   color: #053852;

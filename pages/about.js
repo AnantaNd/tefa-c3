@@ -1,12 +1,11 @@
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 import style from "../styles/About.module.css";
-
 
 export default function about(){
   return(
     <>
-      <Navbar/>
-      <h1 className={style.title}>About</h1>
+    <Layout>
+    <h1 className={style.title}>About</h1>
       <div className={style.container}>
         <p className={style.description}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A in
@@ -15,6 +14,7 @@ export default function about(){
             labore sapiente.
         </p>
       </div>
+    </Layout>
     </>
   )
 }
