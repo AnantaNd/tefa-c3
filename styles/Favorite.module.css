@@ -30,6 +30,8 @@
 .sub_title{
   letter-spacing: 2px;
   text-transform: capitalize;
+  font-family: 'fantasy';
+  font-size: 28px;
 }
 .row{
   margin: 2rem 3rem;
@@ -46,14 +48,12 @@
   flex-shrink: 2;
   flex-grow: 2;
 }
-.menu{
-  text-transform: capitalize;
-}
 /* card food */
 .card{
   max-width: 300px;
   text-align: center;
   margin: 2px auto;
+  /* border: 1px solid #053852; */
   box-shadow: 0 3px 3px 2px #A9C7C5;
 }
 .content{
@@ -92,9 +92,8 @@
 }
 .btn_reset{
   border: none;
-  outline: 0;
   padding: 4px;
-  margin-left: 8px;
+  margin: 8px;
   color: #fff;
   background-color: #053852;
   cursor: pointer;
@@ -102,7 +101,9 @@
   border-radius: 3px;
 }
 .btn:hover, .btn_reset:hover{
-  color: #fa573a;
+  background-color: #fa573a;
+  transform: scale(1.05);
+  transition-delay: 8ms;
 }
 .ordered{
   font-size: 16px;

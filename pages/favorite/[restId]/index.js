@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import style from "../../../styles/Favorite.module.css";
+
 export default function Favorite({data}){
   
   const [isData, setIsData] = useState(data);
@@ -24,12 +25,16 @@ export default function Favorite({data}){
       }
     })  
   }
-  const handleDownOrder =()=>{
-    if(count === 0){
-      return setCount(0);
-    }else{
-      return setCount(count--);
-    }
+  const handleDownOrder =(id)=>{
+    data.menu.map((menu)=>{
+      if(menu.idMenu === id){
+        if(count === 0){
+          return setCount(0);
+        }else{
+          return setCount(count--);
+        }
+      }
+    })
   }
 
   return (
@@ -57,7 +62,7 @@ export default function Favorite({data}){
                   </p>
                 </div>
                 <button className={style.btn} onClick={()=>handleUpOrder(menu.idMenu)}>+</button>
-                <button className={style.btn} onClick={()=>handleDownOrder()}>-</button>
+                <button className={style.btn} onClick={()=>handleDownOrder(menu.idMenu)}>-</button>
               </div>
             </div>
           ))}

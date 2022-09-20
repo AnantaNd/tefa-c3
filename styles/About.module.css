@@ -1,52 +1,53 @@
 .container{
   width: 80%;
-  height: 90%;
+  height: 500px;
   margin: 3rem auto;
   border-radius: 10px;
-  box-shadow: -1px 15px 21px -3px rgba(0,0,0,0.36);
-}
-.container_text{
-  width: 280px;
-  height: 350px;
-  margin: 3rem auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 3px 2px #2c2c2ca2;
-}
-.description{
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 2rem;
+  box-shadow: 0 3px 3px 2px #A9C7C5;
 }
 .title{
   text-align: center;
-  font-family: 'fantasy';
-  margin: 50px auto;
-  letter-spacing: 2px;
-  font-size: 50px;
-  color: #fa573a;
+  padding: 2rem;
+  text-transform: capitalize;
 }
-.row{
-  margin: 1rem auto;
+.input_field{
   box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  margin: 5px auto;
+  padding: .8rem;
+  width: 80%;
+  height: 50px;
+  border-style: none none solid none;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
 }
-.col {
-  margin: 8px;
-  flex-basis: 250px;
-  flex-shrink: 2;
-  flex-grow: 2;
+.btn_submit{
+  box-sizing: border-box;
+  display: flex;
+  margin: 1rem auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #053852;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
 }
-.subtitle{
-  justify-content: center;
-  align-items: center;
+.display{
+  box-sizing: border-box;
+  font-size: 18px;
   text-align: center;
-  padding-top: 1rem;
-
+}
+.display_name{
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.display_gender{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #575757;
 }
