@@ -1,9 +1,16 @@
 .container{
   width: 80%;
-  height: 350px;
+  height: 90%;
   margin: 3rem auto;
   border-radius: 10px;
   box-shadow: -1px 15px 21px -3px rgba(0,0,0,0.36);
+}
+.container_text{
+  width: 280px;
+  height: 350px;
+  margin: 3rem auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 2px #2c2c2ca2;
 }
 .description{
   justify-content: center;
@@ -20,4 +27,26 @@
   letter-spacing: 2px;
   font-size: 50px;
   color: #fa573a;
+}
+.row{
+  margin: 1rem auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+.col {
+  margin: 8px;
+  flex-basis: 250px;
+  flex-shrink: 2;
+  flex-grow: 2;
+}
+.subtitle{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+
 }

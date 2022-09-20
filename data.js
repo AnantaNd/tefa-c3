@@ -2,7 +2,7 @@ export const restaurant = [
   {
     id: 1,
     title: "Javanine Resto",
-    rating: '3.5',
+    rating: '3',
     location: "Jakarta",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image:'https://ik.imagekit.io/l47yqgkjf/4_ea0LoGarw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661050624413c',
@@ -56,6 +56,22 @@ export const restaurant = [
         nameMenu: 'mathca latte',
         price: 18000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/12_q8N4Vt3hf.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663242976592'
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "Javanine Resto",
+    rating: '3.6',
+    location: "Solo",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    image:'https://ik.imagekit.io/l47yqgkjf/4_ea0LoGarw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661050624413c',
+    menu: [
+      {
+        idMenu:1,
+        nameMenu: 'mie goreng',
+        price: 20000,
+        imgMenu:'https://ik.imagekit.io/l47yqgkjf/8_tLWy8fZRj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663217272232'
       }
     ]
   },

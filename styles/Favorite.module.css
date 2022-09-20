@@ -2,6 +2,23 @@
   margin: 0 auto;
   padding: 2px;
 }
+.container_card {
+  margin: 5rem auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.container_content{
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .title{
   font-size: 50px;
   font-weight: 600;
@@ -10,19 +27,12 @@
   color: #fa573a;
   font-family: fantasy;
 }
-.container_card {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: -1px 15px 21px -3px rgba(0,0,0,0.36);
-
+.sub_title{
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 .row{
-  margin: 4rem 3rem;
+  margin: 2rem 3rem;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -38,4 +48,65 @@
 }
 .menu{
   text-transform: capitalize;
+}
+/* card food */
+.card{
+  max-width: 300px;
+  text-align: center;
+  margin: 2px auto;
+  box-shadow: 0 3px 3px 2px #A9C7C5;
+}
+.content{
+  margin: 0px;
+}
+.title_card{
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+.img_card{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+}
+.price_card{
+  font-size: 22px;
+  margin: 0px;
+
+}
+.total{
+  margin: 2px;
+  color: #839e9c;
+
+}
+.btn{
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: #fff;
+  background-color: #053852;
+  width: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+.btn_reset{
+  border: none;
+  outline: 0;
+  padding: 4px;
+  margin-left: 8px;
+  color: #fff;
+  background-color: #053852;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+}
+.btn:hover, .btn_reset:hover{
+  color: #fa573a;
+}
+.ordered{
+  font-size: 16px;
+  color: #fa573a;
+  font-weight: 600;
+  
 }
