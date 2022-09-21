@@ -31,8 +31,10 @@ export default function About(){
         </div>
         <div className={style.display_comment}>
           <h1 className={style.title}>comment</h1>
-          <p>{isData.email}</p>
-          <p>{isData.comment}</p>
+          <div className={style.content_comment}>
+            <p className={style.text_email}>{isData.email}</p>
+            <p className={style.text_comment}>{isData.comment}</p>
+          </div>
         </div>
       </div>
     </>

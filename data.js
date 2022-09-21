@@ -8,7 +8,7 @@ export const restaurant = [
     image:'https://ik.imagekit.io/l47yqgkjf/4_ea0LoGarw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661050624413c',
     menu: [
       {
-        idMenu:1,
+        _id:1,
         nameMenu: 'mie goreng',
         price: 20000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/8_tLWy8fZRj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663217272232'
@@ -24,7 +24,7 @@ export const restaurant = [
     image:'https://ik.imagekit.io/l47yqgkjf/3_GoOpl6YFP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1660621619556',
     menu: [
       {
-        idMenu:1,
+        _id:1,
         nameMenu: 'nasi goreng',
         price: 20000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/9_WWVBdTVGq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663242384954'
@@ -40,19 +40,19 @@ export const restaurant = [
     image:'https://ik.imagekit.io/l47yqgkjf/6_vTISTpmrp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661223965452',
     menu: [
       {
-        idMenu:1,
+        _id:1,
         nameMenu: 'Capuchino',
         price: 20000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/10_wF-gQbT1c.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663216742035'
       },
       {
-        idMenu:2,
+        _id:2,
         nameMenu: 'expresso',
         price: 20000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/11_mfYAIshnk.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663241613367'
       },
       {
-        idMenu:3,
+        _id:3,
         nameMenu: 'mathca latte',
         price: 18000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/12_q8N4Vt3hf.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663242976592'
@@ -68,7 +68,7 @@ export const restaurant = [
     image:'https://ik.imagekit.io/l47yqgkjf/4_ea0LoGarw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1661050624413c',
     menu: [
       {
-        idMenu:1,
+        _id:1,
         nameMenu: 'mie goreng',
         price: 20000,
         imgMenu:'https://ik.imagekit.io/l47yqgkjf/8_tLWy8fZRj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1663217272232'
