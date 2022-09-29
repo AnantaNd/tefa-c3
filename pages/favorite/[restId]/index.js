@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../../../components/Navbar";
 import style from "../../../styles/Favorite.module.css";
 
 export default function Favorite({data}){
@@ -44,7 +43,7 @@ export default function Favorite({data}){
 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className={style.container}>
         <h1 className={style.title}>{isData.title}</h1>
       </div>

@@ -23,6 +23,14 @@
   color: #fa573a;
   font-family: cursive;
 }
+.hero_subTitle{
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: start;
+  color: #fff;
+  /* font-family: cursive; */
+}
 @media screen and (max-width: 768px) {
   .hero_description{
     font-size: 18px;

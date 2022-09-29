@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Navbar from "../components/Navbar";
 import style from "../styles/About.module.css";
 
 export default function About(){
@@ -15,7 +14,7 @@ export default function About(){
 
   return(
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className={style.container}>
         <div className={style.about}>
           <h1 className={style.title}>about us</h1>

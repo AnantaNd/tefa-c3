@@ -1,13 +1,14 @@
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
-import Layout from '../components/Layout'
 
 export default function Home() {
 
   // const [dataAsync, setDataAsync] = useState([])
   const [dataPromise, setdataPromise] = useState([])
+  const {data : session} = useSession()
   
   // async wait fecthApi
   // async function fecthApiAsync(){
@@ -40,7 +41,7 @@ export default function Home() {
 
   return (
     <main className="container">
-      <Layout>
+      {/* <Layout> */}
         <section id='description'>
           <Hero />
           <Link href="#menu">
@@ -51,7 +52,7 @@ export default function Home() {
           <div className="container_card">
             <div className="row">
               {dataPromise.map((restaurants)=>
-                <Link href={`/favorite/${restaurants.id}`}>
+                // <Link href={`/favorite/${restaurants.id}`}>
                   <div className="col" key={restaurants.id}>
                     <Card
                       image={restaurants.image}
@@ -61,7 +62,7 @@ export default function Home() {
                       desc={restaurants.description}
                     />
                   </div>
-                </Link>
+                // </Link>              
               )}
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function Home() {
         <Link href="#description">
           <p className="label-section">back to top</p>
         </Link>
-      </Layout>
+      {/* </Layout> */}
     </main>
   )
 }
