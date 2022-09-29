@@ -10,14 +10,6 @@ export default function Navbar (){
   const navOpen = () => {setIsOpen(!isOpen), console.log('click')}
   const {data:session} = useSession()
 
-  // const navItem = [
-  //   {name : 'home', link: '/'},
-  //   {name : 'favorite', link: '/favorite'},
-  //   // {name : 'galery', link: '/galery'},
-  //   {name : 'about us', link: '/about'},
-  // ]
-
-
   return (
     <nav className={style.navbar}>
       <Link href='/'>
@@ -48,9 +40,3 @@ export default function Navbar (){
     </nav>
   )
 }
-// {navItem.map((navItem, i)=>
-//   <li key={i} className={style.item}>
-//     <Link 
-//       href={navItem.link}>{navItem.name}</Link>
-//   </li>
-// )}
