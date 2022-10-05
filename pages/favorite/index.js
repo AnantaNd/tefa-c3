@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card";
+import Navbar from "../../components/Navbar";
 import style from "../../styles/Favorite.module.css";
 
 export default function Favorite({data}){
   const [isData, setIsData] = useState(data)
-  // console.log(isData)
+  console.log(isData)
 
   useEffect(()=>{
     const filterData = isData.filter((i)=>(i.rating >= 3.5));
@@ -15,7 +16,7 @@ export default function Favorite({data}){
 
   return(
     <main className={style.container}>
-      {/* <Navbar/> */}
+      <Navbar/>
       <section>
       <div className={style.container_card}>
         <h1 className={style.sub_title}>restaurant favorite</h1>
@@ -47,5 +48,4 @@ export async function getServerSideProps() {
         data,
       },
     };
-
 }

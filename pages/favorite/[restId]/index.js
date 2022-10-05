@@ -86,4 +86,12 @@ export default function Favorite({data}){
   )
 }
 
-
+export async function getServerSideProps({params}) {
+  const res = await fetch('http://localhost:3000/api/restaurant/'+params.restId);
+  const data = await res.json();
+    return {
+      props: {
+        data,
+      },
+    };
+}
