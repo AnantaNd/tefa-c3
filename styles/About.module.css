@@ -94,7 +94,9 @@
   opacity: .8;
 }
 .text_comment{
-  font-size: 20px;
+  font-size: 19px;
+  /* background-color: red; */
+  text-align: justify;
 }
 @media screen and (max-width: 768px){
   .container{

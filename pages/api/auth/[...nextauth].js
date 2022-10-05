@@ -1,31 +1,34 @@
+// import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+// import clientPromise from '../../../lib/mongodb';
 
-
-export default NextAuth({
-  providers: [
+export const authOptions = {
+  providers : [
     GithubProvider({
-        clientId: process.env.GITHUB_ID,
-        clientSecret: process.env.GITHUB_SECRET,
+      clientId : process.env.GITHUB_ID,
+      clientSecret : process.env.GITHUB_SECRET,
     }),
   ],
-  // database: process.env.DB_URL,
-  // session: {
-  //   jwt: true,
+  // adapter: MongoDBAdapter(clientPromise),
+  // session:{
+  //   strategy: "jwt",
   // },
   // jwt:{
-  //   secret: 'qwerty'
+  //   secret: process.env.JWT_SECRET,
   // },
   // callbacks:{
-  //   async jwt(token, user){
-  //     if(user){
-  //       token.id=user.id
+  //   async jwt({ token, account }) {
+  //     if (account) {
+  //       token.accessToken = account.access_token;
   //     }
-  //     return token
+  //     return token;
   //   },
-  //   async session(session, token){
-  //     session.user.id=token.id
-  //     return session
-  //   }
+  //   async session({ session, token, user }) {
+  //     session.accessToken = token.accessToken;
+  //     return session;
+  //   },
+
   // }
-})
+}
+export default NextAuth(authOptions)

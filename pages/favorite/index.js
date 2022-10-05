@@ -5,7 +5,7 @@ import style from "../../styles/Favorite.module.css";
 
 export default function Favorite({data}){
   const [isData, setIsData] = useState(data)
-  console.log(isData)
+  // console.log(isData)
 
   useEffect(()=>{
     const filterData = isData.filter((i)=>(i.rating >= 3.5));

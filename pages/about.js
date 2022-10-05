@@ -1,3 +1,4 @@
+import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import style from "../styles/About.module.css";
@@ -5,7 +6,8 @@ import style from "../styles/About.module.css";
 export default function About(){
   const { register, handleSubmit } = useForm();
   const [isData, setIsData] = useState('');
-
+  const {data: session} = useSession()
+  
   const onSubmit =(data)=> {
     setIsData(data)
     console.log(isData)
@@ -23,7 +25,7 @@ export default function About(){
         <div className={style.comment}>
           <h1 className={style.title_comment}>comment</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input className={style.input_email} {...register("email")} placeholder="email" />
+            <input className={style.input_email} {...register("email")} placeholder='email'/>
             <textarea className={style.input_comment} {...register("comment")} placeholder="comment ..." />
             <button className={style.btn_submit} type='submit'>submit</button>
           </form>

@@ -11,16 +11,16 @@ export default function Home() {
   const {data : session} = useSession()
   
   // async wait fecthApi
-  // async function fecthApiAsync(){
-  //   try{
-  //     const res = await fetch('./api/restaurant');
-  //     const data = await res.json();
-  //     console.log(data);
-  //     setDataAsync(data);
-  //   }catch(e){
-  //     console.error(e);
-  //   }
-  // }
+  async function fecthApiAsync(){
+    try{
+      const res = await fetch('./api/restaurant');
+      const data = await res.json();
+      // console.log(data);
+      setDataAsync(data);
+    }catch(e){
+      console.error(e);
+    }
+  }
 
   // promise fecthApi
   const fecthApiPromise =()=> {
@@ -29,7 +29,7 @@ export default function Home() {
       .then(res => res.json())
       .then(data => { 
         setdataPromise(data) 
-        console.log(data) 
+        // console.log(data) 
       })
       .catch(e => { console.error(e)} );
   }

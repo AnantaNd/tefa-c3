@@ -7,7 +7,7 @@ import style from '../styles/Navbar.module.css'
 
 export default function Navbar (){
   const [isOpen, setIsOpen] = useState(false)
-  const navOpen = () => {setIsOpen(!isOpen), console.log('click')}
+  const navOpen = () => {setIsOpen(!isOpen)}
   const {data:session} = useSession()
 
   return (
